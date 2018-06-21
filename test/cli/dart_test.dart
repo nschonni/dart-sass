@@ -25,7 +25,5 @@ void main() {
 }
 
 Future<TestProcess> runSass(Iterable<String> arguments) => TestProcess.start(
-    Platform.executable,
-    ["--checked", p.absolute("bin/sass.dart")]..addAll(arguments),
-    workingDirectory: d.sandbox,
-    description: "sass");
+    Platform.executable, [p.absolute("bin/sass.dart")]..addAll(arguments),
+    workingDirectory: d.sandbox, description: "sass");
